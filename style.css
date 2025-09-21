@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #3d3dc6;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s forwards; /* Fade-in animation */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #010206;
+    color: white;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
